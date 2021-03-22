@@ -1,14 +1,26 @@
 :root {
   --primary-white: #fff;
-  --primary-blue: rgba(0, 153, 255, 0.87);
+  --primary-blue: #3f79c0;
   --primary-dark: rgba(255, 255, 255, 0);
+  --primary-orange: #b86800;
+  --primary-hover-orange: #965500;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url("./fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
 /**************************NAVBAR**************************/
+nav {
+  z-index: 2;
+}
+
 .logo {
   width: 10.25rem;
 }
@@ -21,6 +33,7 @@ body {
 nav ul li {
   text-transform: uppercase;
   font-size: 0.8rem;
+  font-family: "Montserrat";
 }
 
 .navbar-nav > li > a {
@@ -42,4 +55,80 @@ nav ul li {
 
 .navbar-nav > li > a:hover {
   border-top: 0.185rem solid var(--primary-blue);
+}
+
+/**************************HEADER**************************/
+.header-wraper {
+  position: relative;
+  background: url(laptop-pic.png) no-repeat black;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.main-info {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat";
+  z-index: 1;
+}
+
+.main-info h1 {
+  color: var(--primary-blue);
+  text-transform: uppercase;
+}
+
+/*------------TYPED TEXT----------------*/
+.typed-text {
+  font-size: 2rem;
+  color: var(--primary-white) !important;
+}
+
+/*------------MAIN OFFER BUTTON----------------*/
+.btn-main-offer {
+  border: 1px solid var(--primary-orange);
+  background-color: var(--primary-orange);
+  border-radius: 5px;
+  text-transform: uppercase;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: var(--primary-white);
+  margin: 2rem;
+}
+
+.btn-main-offer:hover {
+  text-decoration: none;
+  background-color: var(--primary-hover-orange);
+  color: var(--primary-white);
+  transition: 0.2s ease-in-out;
+}
+
+/*------------PARTICLES---------------*/
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+/*------------RESPONSIVE LAYOUTS---------------*/
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  /* .particles-canvas {
+    display: none;
+  }*/
+  .main-info h1 {
+    font-size: 1.5rem;
+  }
+  .typed-text {
+    font-size: 1.2rem;
+  }
 }
