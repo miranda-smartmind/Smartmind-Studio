@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
 :root {
   --primary-white: #fff;
-  --primary-blue: #3f79c0;
+  --primary-blue: #2ca8ca;
   --primary-dark: rgba(255, 255, 255, 0);
+  --primary-gray: #505962;
+  --secondary-blue: #407bc1;
   --primary-orange: #b86800;
   --primary-hover-orange: #965500;
+  --transparent-black: rgba(0, 0, 0, 0.6);
 }
 
 @font-face {
@@ -13,7 +18,9 @@
 }
 
 body {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  color: #505962;
+  font-family: "lato", Arial, sans-serif;
 }
 
 /**************************NAVBAR**************************/
@@ -21,46 +28,78 @@ nav {
   z-index: 2;
 }
 
+.navbar {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.9rem;
+  background: var(--transparent-black) !important;
+}
+
 .logo {
   width: 10.25rem;
 }
 
-/*------------MENU LINKS----------------*/
-.nav-link {
-  cursor: pointer;
+.nav-item {
+  padding-right: 0.7rem;
 }
 
-nav ul li {
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  font-family: "Montserrat";
-}
-
-.navbar-nav > li > a {
+.navbar-dark .navbar-nav .nav-link {
+  color: white !important;
   margin-right: 0.75rem;
   margin-left: 0.75rem;
-  color: var(--primary-white) !important;
-  border-top: 0.185rem solid var(--primary-dark);
 }
 
 .navbar-brand {
   padding: 0 !important;
   max-width: 17.25rem;
 }
-
-.navbar-nav > li > a.active,
-.navbar-nav > li > a.active:focus {
-  border-top: 0.185rem solid var(--primary-blue);
+/*============= Landing Page=============*/
+.home-inner {
+  background-image: url(img/image3.png);
+}
+.caption {
+  width: 100%;
+  max-width: 100%;
+  text-transform: uppercase;
+  position: absolute;
+  top: 38%;
+  color: white;
+  z-index: 1;
 }
 
-.navbar-nav > li > a:hover {
-  border-top: 0.185rem solid var(--primary-blue);
+.caption h1 {
+  text-shadow: 0.1rem 0.1rem 0.8rem black;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  font-size: 3.8rem;
+  padding-bottom: 1rem;
+}
+
+.caption h3 {
+  text-shadow: 0.1rem 0.1rem 0.5rem black;
+  padding-bottom: 0.6rem;
+  font-size: 2rem;
+}
+
+.navbar-nav > li > a {
+  border-top: 0.185rem solid rgba(0, 0, 0, 0);
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.active:focus {
+  border-top: 0.185rem solid var(--primary-blue) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  border-top: 0.185rem solid var(--primary-blue) !important;
+  color: var(--primary-blue) !important;
 }
 
 /**************************HEADER**************************/
 .header-wraper {
   position: relative;
-  background: url(laptop-pic.png) no-repeat black;
+  background: url(img/image3.png) no-repeat black;
   background-size: cover;
   background-position: center;
   height: 90vh;
@@ -82,34 +121,38 @@ nav ul li {
 }
 
 .main-info h1 {
-  color: var(--primary-blue);
+  color: var(--primary-white);
   text-transform: uppercase;
 }
 
 /*------------TYPED TEXT----------------*/
 .typed-text {
-  font-size: 2rem;
-  color: var(--primary-white) !important;
+  font-size: 1.8rem;
+  color: var(--primary-blue) !important;
+  text-transform: capitalize;
 }
 
 /*------------MAIN OFFER BUTTON----------------*/
-.btn-main-offer {
-  border: 1px solid var(--primary-orange);
-  background-color: var(--primary-orange);
-  border-radius: 5px;
-  text-transform: uppercase;
-  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
-  color: var(--primary-white);
-  margin: 2rem;
+
+.btn-lg {
+  font-size: 1rem !important;
+  padding: 0.6rem 1.3rem !important;
+  margin-top: 3.5rem;
+  border-width: medium;
+  letter-spacing: 0.1rem;
 }
 
-.btn-main-offer:hover {
-  text-decoration: none;
-  background-color: var(--primary-hover-orange);
-  color: var(--primary-white);
-  transition: 0.2s ease-in-out;
+.btn-wraper {
+  top: 50% !important;
 }
 
+.btn-lg:hover {
+  background-color: var(--primary-blue) !important;
+  border-color: var(--primary-blue) !important;
+  color: white !important;
+  transition: ease-in-out;
+  text-shadow: 0.05rem 0.05rem 0.2rem black;
+}
 /*------------PARTICLES---------------*/
 .tsparticles-canvas-el {
   position: absolute;

@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Montserrat from './fonts/Montserrat/Montserrat-SemiBold.ttf';
+
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,8 +1,14 @@
 import './App.css';
-import Navbar from "./components/Navbar"
-import Header from "./components/Header"
-import './bootstrap/dist/css/bootstrap.min.css'
-import Particles from "react-particles-js"
+import "./fixed.css";
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import About from "./components/About";
+import Services from "./components/Services";
+import Projects from "./components/CompletedProjects"
+import Portfolio from "./components/Portfolio";
+import Contact from "./components/Contact";
+import './bootstrap/dist/css/bootstrap.min.css';
+import Particles from "react-particles-js";
 
 function App() {
   return (
@@ -21,7 +27,7 @@ function App() {
             type: "circle",
             stroke: {
               width: 6,
-              color: "#f9ab00"
+              color: "#2ca8ca"
             }
           }
         }
@@ -29,6 +35,10 @@ function App() {
     />
     <Navbar/>
     <Header/>
+    <About/>
+    <Services/>
+    <Projects/>
+    <Portfolio/>
     </>
   );
 }
