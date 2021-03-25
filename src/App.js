@@ -4,11 +4,13 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import About from "./components/About";
 import Services from "./components/Services";
-import Projects from "./components/CompletedProjects"
-import Portfolio from "./components/Portfolio";
+import Statistics from "./components/Statistics"
+import Testimonial from "./components/testimonial";
 import Contact from "./components/Contact";
 import './bootstrap/dist/css/bootstrap.min.css';
 import Particles from "react-particles-js";
+/*============IMPORTING FONT AWESOME================ */
+
 
 function App() {
   return (
@@ -37,8 +39,9 @@ function App() {
     <Header/>
     <About/>
     <Services/>
-    <Projects/>
-    <Portfolio/>
+    <Statistics/>
+    <Testimonial/>
+    <Contact/>
     </>
   );
 }

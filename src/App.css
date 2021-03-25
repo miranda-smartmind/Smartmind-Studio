@@ -6,8 +6,8 @@
   --primary-dark: rgba(255, 255, 255, 0);
   --primary-gray: #505962;
   --secondary-blue: #407bc1;
-  --primary-orange: #b86800;
-  --primary-hover-orange: #965500;
+  --primary-orange: #e97f02;
+  --primary-hover-orange: #d17205;
   --transparent-black: rgba(0, 0, 0, 0.6);
 }
 
@@ -161,6 +161,11 @@ nav {
   z-index: 1;
 }
 
+/*------------PARTICLES---------------*/
+.service img {
+  width: 5rem;
+}
+
 /*------------RESPONSIVE LAYOUTS---------------*/
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -169,7 +174,10 @@ nav {
     display: none;
   }*/
   .main-info h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+  }
+  .main-info h3 {
+    font-size: 1.2rem;
   }
   .typed-text {
     font-size: 1.2rem;
