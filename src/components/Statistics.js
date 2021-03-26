@@ -35,7 +35,9 @@ const Statistics = () => {
                     </div>
                 </div>
                 <div className="fixed-wrap">
-
+                    <div className="fixed">
+                        
+                    </div>
                 </div>
             </div>
         </div>

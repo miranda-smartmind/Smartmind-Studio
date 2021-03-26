@@ -4,14 +4,14 @@ import bg from '../img/image3.png'
 
 const Header = () => {
     return (
-        <div className="landing">
+        <div id="home" className="offset">
         <div className="home-wrap">
             <div className="home-inner">
 
             </div>
         </div>
         <div className="header-wraper">
-            <div className="main-info">
+            <div  className="main-info">
                 <div className="caption text-center">
                 <h1>The Smartminds Studio</h1>
                     <h3>Best in Websites and Graphics</h3>
